@@ -10,7 +10,7 @@
 @section('body')
     <header class="w-full">
         <a href="/">
-            <div class="w-24 h-24 bg-cover bg-right"
+            <div class="w-24 h-24 bg-cover bg-right border border-yellow-500"
                 style="background-image: url('/assets/img/joelpeven-landscape.jpg')">
             </div>
          </a>
@@ -20,9 +20,17 @@
         <img src="{{ $page->cover_image }}" alt="{{ $page->title }} cover image" class="mb-2">
     @endif
 
-    <h1 class="leading-none mb-2">{{ $page->title }}</h1>
+    <h1 class="text-3xl mt-0 font-black text-5xl text-orange-500 tracking-tighter no-underline">
+        @foreach (explode(' ', $page->title) as $word)
+            <span class="@if ($loop->last) text-yellow-500 @endif">
+                {{ $word }}
+            </span>
+        @endforeach
+    </h1>
 
-    <p class="text-gray-700 text-xl md:mt-0">{{ $page->author }}  •  {{ date('F j, Y', $page->date) }}</p>
+    <p class="text-gray-700 text-xl md:mt-0 text-right">
+        {{ $page->author }}  •  {{ date('F j, Y', $page->date) }}
+    </p>
 
     @if ($page->categories)
         @foreach ($page->categories as $i => $category)
@@ -34,7 +42,7 @@
         @endforeach
     @endif
 
-    <div class="border-b border-blue-200 mb-10 pb-4" v-pre>
+    <div class="mb-10 pb-4" v-pre>
         @yield('content')
     </div>
 

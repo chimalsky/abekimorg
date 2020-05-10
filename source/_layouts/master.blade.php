@@ -23,30 +23,23 @@
             <!-- Insert analytics code here -->
         @endif
 
-        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
         <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
     </head>
 
-    <body class="flex flex-col justify-between min-h-screen bg-gray-100 text-gray-800 leading-normal font-sans">
+    <body class="flex flex-col justify-between min-h-screen bg-gray-900 
+        text-gray-100 leading-normal font-sans">
 
         @include('_nav.menu-responsive')
 
-        <main role="main" class="flex-auto w-full container max-w-4xl mx-auto py-16 px-6">
+        <main role="main" class="flex-auto w-full container max-w-4xl mx-auto py-16">
             @yield('body')
+
+            <footer class="text-center text-sm mt-12 py-12" role="contentinfo">
+                <a href="mailto:ich.bin.abe@gmail.com" class="text-center">
+                    ich.bin.abe@gmail.com
+                </a>
+            </footer>
         </main>
-
-        <footer class="bg-white text-center text-sm mt-12 py-4" role="contentinfo">
-            <ul class="flex flex-col md:flex-row justify-center list-reset">
-                <li>
-                    Built with <a href="http://jigsaw.tighten.co" title="Jigsaw by Tighten">Jigsaw</a>
-                    and <a href="https://tailwindcss.com" title="Tailwind CSS, a utility-first CSS framework">Tailwind CSS</a>.
-                </li>
-            </ul>
-
-            <a href="mailto:ich.bin.abe@gmail.com" class="text-center">
-                ich.bin.abe@gmail.com 
-            </a>
-        </footer>
 
         <script src="{{ mix('js/main.js', 'assets/build') }}"></script>
 

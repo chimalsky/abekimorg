@@ -1,40 +1,28 @@
 @extends('_layouts.master')
 
 @section('body')
-    <header class="text-xl font-semibold lg:mt-16">
-       Hi, this is Abe,
-       
-       <span class="font-normal">
-            and I pair my love for stories with technology to 
-            explore, ideate, and create meaningful experiences 
-            alongside fascinating partners.
-        </span>
-    </header>
+    
+    <main class="lg:mt-12 max-w-3xl mx-auto">
+        <header class="flex flex-wrap justify-end w-auto">
+            <img src="assets/img/joelpeven-landscape.jpg" 
+                class="w-1/3 md:w-1/4 lg:w-1/5 mr-1 
+                border-2 border-dashed border-orange-300" />
 
-    <main class="flex flex-wrap lg:mt-12">
-        <section class="md:w-3/4">
-            <p>
-                I got to do that with a pair of
-                Italian scholars by bringing some of Petrarch's poetry 
-                to the <a href="blog/petrarchive">modern web.</a>
-            </p>
+            <img src="assets/img/strange-fence.jpg" 
+                class="w-1/3 md:w-1/4 lg:w-1/5 ml-1 
+                border-4 border-dashed border-yellow-300" />
+        </header>
 
-            <p>
-                Recently, I began exploring the idea of refining ideas with an
-                <a href="blog/ideator">Ideator tool</a> that I'm tinkering with. 
-            </p>
-
-            <p>
-                And since last December, I've been writing near daily on 
-                <a href="https://200wordsaday.com">200WordsADay.com</a>, a buddening writing community 
-                accessible to anyone willing to write at least 200 words a day. 
-                Come join us, if you'd 
-                like to make a habit out of writing alongside other fellow writers.
-            </p>
-        </section>
-
-        <div class="md:w-1/4 bg-cover bg-right" 
-            style="background-image: url('assets/img/joelpeven-landscape.jpg')">
-        </div>
+        @forelse ($posts->where('published', true)->take(6) as $post)
+            <div class="w-full @if($loop->first) mt-12 @endif mb-16">
+                @include('_components.post-preview-inline')
+            </div>
+        @empty 
+            <h1 class="text-3xl mt-0 font-black text-5xl text-orange-500 mt-4
+                tracking-tighter no-underline">
+                Joel Peven is the <span class="text-yellow-500">Shiz-Nitz</span>
+            </h1>
+        @endforelse
+            
     </main>
 @stop
