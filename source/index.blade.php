@@ -30,10 +30,7 @@
                 tracking-tighter no-underline">
                 <span class="text-yellow-500">dave</span>... is such a Good Guy
             </h1>
-            <h1 class="text-3xl mt-0 font-black text-5xl text-orange-500 mt-4
-                tracking-tighter no-underline">
-                <span class="text-yellow-500">dave</span>... is such a Good Guy
-            </h1>
+            
         @endforelse
             
     </main>
