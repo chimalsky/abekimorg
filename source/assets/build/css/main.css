@@ -868,7 +868,7 @@ ol,
 ul {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  list-style: disc;
+  list-style: none;
   padding-left: 2rem;
 }
 

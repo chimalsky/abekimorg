@@ -28,8 +28,34 @@
             </h1>
             <h1 class="text-3xl mt-0 font-black text-5xl text-orange-500 mt-4
                 tracking-tighter no-underline">
-                <span class="text-yellow-500">dave</span>... is such a Good Guy
+                <span class="text-yellow-500">dave</span>... was such a Good Guy
             </h1>
+
+            <section class="max-w-md mx-auto mt-64">
+                <h2 class="text-gray-400 border-b-4 border-gray-600 pb-2 text-sm mt-24">
+                    My OFFICIAL list of people who are FIRED!! 
+                </h2>
+                <ul class="text-gray-500 text-2xl unstyled">
+                    <li class="mb-2">
+                        Joel 
+                        <span class="pl-2 text-sm">
+                            for not renewing his HBO NOW account
+                        </span>
+                    </li>
+                    <li class="mb-2">
+                        Drew 
+                        <span class="pl-2 text-sm">
+                            
+                        </span>
+                    </li>
+                    <li class="mb-2">
+                        Dave 
+                        <span class="pl-2 text-sm">
+                            for no longer being such a good guy
+                        </span>
+                    </li>
+                </ul>
+            </section>
             
         @endforelse
             
