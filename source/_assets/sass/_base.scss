@@ -3,17 +3,6 @@ body {
     @apply .font-sans;
 }
 
-a {
-    @apply .font-semibold;
-    @apply .underline;
-    @apply .text-orange-500;
-    @apply .p-1;
-
-    &:hover {
-        @apply .text-yellow-500;
-    }
-}
-
 blockquote {
     @apply .border-blue-400;
     @apply .border-l-4;
